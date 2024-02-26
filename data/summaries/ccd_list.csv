@@ -1,0 +1,8 @@
+this should be a list of all ccds that are affected by the remediation
+
+It should have Y/N columns that say what change has been made, including:
+- PCM data added
+- CCD name changed
+- CCD parent changed
+- CCD type changed
+- CCD obsoleted
