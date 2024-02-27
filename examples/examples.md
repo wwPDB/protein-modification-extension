@@ -11,7 +11,8 @@ The table below gives an overview of these files.
 | 1SZA   | 1 Phosphoserine                                                                                              | 
 | 4ZPZ   | 2 Phosphoserines and 1 disulfide bridge                                                                      |
 | 1J04   | 1 Pyridoxal phosphate attached to lysine                                                                     |
-| 5YY9   | 2 Trimethyl lysines                                                                                          | 
+| 5YY9   | 2 Trimethyl lysines                                                                                          |
+| 2K4H   | 1 Myristic acid covalently bonded to glycine                                                                 |
 | 6J6M   | 1 Covalent chemical modification (Zanubrutinib)                                                              | 
 | 7C7P   | 2 Covalent chemical modifications (Telaprevir)                                                               |
 | 2THF   | 1 Covalent chemical modification linked to 2 residues and 4 disulfide bridges                                | 
