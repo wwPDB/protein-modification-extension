@@ -29,8 +29,8 @@ This year, all entries containing protein modifications will be remediated to st
 and enrich the protein modification data that they contain. This process will involve: 
 
 - A standardized representation of all protein modifications observed in PDB entries
-- New data categories that summarise the protein modifications a PDB entry contains
-- New data categories that summarise the protein modifications described by a CCD definition
+- New PDB entry data categories that summarise the protein modifications the entry contains
+- New CCD definition data categories that summarise the protein modifications described the chemical unit
 - Enriched descriptions of the protein modifications described in the PDB archive
 
 The standardization and enrichment of protein modification information across all PDB 
@@ -38,12 +38,11 @@ entries will make protein modification data more Findable, Accessible, Interoper
 Reusable (FAIR). Together, this will support the wider usage and analysis of protein 
 modification data in the PDB archive.  
 
-## New CCD Data categories
+## New CCD Data Categories
 
 To provide a summary of the protein modifications that are available in the PDB archive,
 new data categories have been added to CCD files to state whether the CCD can be used to
 describe a protein modification and to list all the protein modifications that a CCD can describe.
-
 
 ### _chem_comp.pdbx_pcm
 
