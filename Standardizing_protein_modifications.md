@@ -45,7 +45,6 @@ performed:
   - This is because this is 'Lipid/lipid-like' and so should be handled as a linked 
   protein modification.
 
-
 ### Merging CCDs
 
 What to include:
@@ -59,7 +58,6 @@ What to include:
 - Example of replacing:
   - 19HC HEM to HEC
 
-
 ### Adding CCDs to Polypeptide Sequences
 - Example of adding ACE/NH2 to N- or C-terminus
   - 1BHQ for ACE and 4TKY for NH2
@@ -72,7 +70,9 @@ What to include:
 
 ### Changing CCD Parents
 - Example of changing parent
-
+  -SOQ is the CCD that describes N-METHYL-ASPARTIC ACID, however it is currently 
+  annotated as not having a parent residue. It is a natural modification to Aspartic acid 
+  and so the parent residue will be changed to ASP.
 
 ## Acknowledgements
 The protein chemical modifications (PCMs) and post translational modifications (PTMs) 
