@@ -18,12 +18,12 @@ PTM - Post-translational modification
 The standardization of protein modification handling ensures that there is a single 
 correct approach to handling each protein modification that occurs within the PDB 
 archive. However, there are many existing PDB entries that contain protein modifications
-that do not follow these handling conventions. 
+which do not follow these handling conventions. 
 
 As part of the protein modification remediation project, all entries containing protein 
 modifications are being re-released to add the new protein modification data category 
 described [here](Protein_modifications.md). During this process, any protein modifications
-that are incorrectly handled within a PDB entry are ammended to ensure that they are 
+that are incorrectly handled within a PDB entry are amended to ensure that they are 
 consistently handled. 
 
 In this document, some examples are provided describing the processes that are being 
@@ -40,39 +40,108 @@ performed:
 
 ### Splitting CCDs
 
-- Example of split
-  - 3U31 MYK to MYR + LYS
-  - This is because this is 'Lipid/lipid-like' and so should be handled as a linked 
-  protein modification.
+In some instances, a single peptide residue CCD is inconsistently used to describe a 
+linked modification. For example, the CCD MYK describes N6-Myristoyl-Lysine, however,
+myristoylation is a lipid modification and must be handled as linked modification. In all
+entries that contain MYK the following splitting process must be performed: 
+
+| Existing CCD | \>  | New Peptide CCD | New Linked CCD | Example PDB Entry ID |
+|--------------|-----|-----------------|----------------|----------------------|
+| MYK          | \>  | LYS             | MYR            | 3U31                 |
+
+A full set of CCDs being replaced is available [here](data/summaries/ccds_split.csv).
 
 ### Merging CCDs
 
-What to include:
-- Example of merge
-  - 1E1Y PO3 + SER to SEP
-  - This is because this is a 'Named protein modification' and so should be handled as a 
-  single CCD describing both the peptide residue and modification group.
+In some instances, a linked modification group is inconsistently used to describe a 
+protein modification that should be handled as a peptide residue within the polypeptide 
+sequence. For example, phosphoserine can be inconsistently described 
+using two CCDs, serine (SER) and phosphate (PO4) rather than the phosphoserine CCD (SEP).
+This is because this is a 'Named protein modification' and so should be handled as a 
+single CCD describing both the peptide residue and modification group. The following 
+merging process must be performed in all of these cases: 
+
+
+| Existing Peptide CCD | Existing Linked CCD | \>  | New CCD | Example PDB Entry ID |
+|----------------------|---------------------|-----|---------|----------------------|
+| SER                  | PO4                 | \>  | SEP     | 6FW5                 |
+
+A full set of CCDs being replaced is available [here](data/summaries/ccds_merge.csv).
 
 ### Replacing CCDs
 
-- Example of replacing:
-  - 19HC HEM to HEC
+In some instances, a CCD ID is incorrectly used to describe a protein modification where
+another existing CCD already describes the modification. One example of this is the use 
+of CCDs to describe Heme (HEM) and Heme C (HEC). HEM should be used exclusively to 
+describe non-covalently bound heme, whereas HEC should be used to describe covalently 
+bound heme C. However, there are many entries in which these are inconsistently used. 
+The following replacement process must be performed in all of these cases:
+
+| Existing CCD | \>  | New CCD | Example PDB Entry ID |
+|--------------|-----|---------|----------------------|
+| HEM          | \>  | HEC     | 19HC                 |
+
+
+A full set of CCDs being replaced is available [here](data/summaries/ccds_replace.csv).
 
 ### Adding CCDs to Polypeptide Sequences
-- Example of adding ACE/NH2 to N- or C-terminus
-  - 1BHQ for ACE and 4TKY for NH2
+
+In some instances, a CCD is linked to the polypeptide rather than being part of the 
+polypeptide sequence. This most often occurs to the terminal residues of the sequence 
+and most commonly to the terminal caps ACE and NH2. The following addition process must
+be performed in all of these cases:
+
+| CCD | Current Handling             | \> | New Handling              | Example PDB Entry ID |
+|-----|------------------------------|----|---------------------------|----------------------|
+| ACE | Linked to peptide N-terminus | \> | Part of peptide sequence  | 1BHQ                 |
+| NH2 | Linked to peptide C-terminus | \> | Part of peptide sequence  | 4TKY                 |
+
+The opposite process can also occur, where a CCD should be removed from a polypeptide 
+sequence. For example terminal myristoylation (MYR) is often inconsistently annotated as being 
+part of the polypeptide sequence. The following removal process must be performed in all 
+of these cases:
+
+| CCD | Current Handling         | \> | New Handling                 | Example PDB Entry ID |
+|-----|--------------------------|----|------------------------------|----------------------|
+| MYR | Part of peptide sequence | \> | Linked to peptide N-terminus | 2NA0                 |
+
+
+A full set of CCDs being added or removed from polypeptide sequences is
+available [here](data/summaries/ccds_to_add_or_remove_from_peptide_seq.csv).
   
+
 ### Renaming CCDs
-- Example of renaming CCD
-  - MLZ - The name will be changed from N-METHYL-LYSINE to N6-METHYL-LYSINE,
-  - Its current name is misleading, implying that the methylation occurs on the backbone 
-  nitrogen rather than the sidechain nitrogen atom.
+
+As part of the protein modification remediation process, many CCDs that describe protein
+modifications are being renamed to make them more findable and remove ambiguities in 
+their naming. For example, the CCD MLZ describes the methylation of the side chain 
+nitrogen of lysine, currently it is named 'N-METHYL-LYSINE' however this name is misleading, 
+implying that the methylation occurs on the backbone nitrogen rather than the side chain 
+nitrogen. It will be renamed in the following process:
+
+| CCD | Current Name    | \> | New Name         | Example PDB Entry ID |
+|-----|-----------------|----|------------------|----------------------|
+| MLZ | N-METHYL-LYSINE | \> | N6-METHYL-LYSINE | 1IV8                 |
+
+This naming must be reflected in all entries that contain the CCD MLZ.
+
+A full set of CCDs being renamed is available [here](data/summaries/ccds_rename.csv).
 
 ### Changing CCD Parents
-- Example of changing parent
-  -SOQ is the CCD that describes N-METHYL-ASPARTIC ACID, however it is currently 
-  annotated as not having a parent residue. It is a natural modification to Aspartic acid 
-  and so the parent residue will be changed to ASP.
+
+As part of the protein modification remediation process, many CCDs that describe protein
+modifications are having their parent residues updated. For example, the CCD SOQ is the 
+CCD that describes N-METHYL-ASPARTIC ACID, however it is currently annotated as not 
+having a parent residue. It is a natural modification to Aspartic acid and so the parent 
+residue will be changed to ASP. The parent will be updated in the following process:
+
+| CCD | Current Parent | \> | New Parent | Example PDB Entry ID |
+|-----|----------------|----|------------|----------------------|
+| SOQ | None           | \> | ASP        | 7AZ6                 |
+
+This change in parent must be reflected in all entries that contain the CCD SOQ.
+
+A full set of CCDs having parents changed is available [here](data/summaries/ccds_change_parent.csv).
 
 ## Acknowledgements
 The protein chemical modifications (PCMs) and post translational modifications (PTMs) 
