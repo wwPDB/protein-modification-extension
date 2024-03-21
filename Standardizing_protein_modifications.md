@@ -15,19 +15,19 @@ PTM - Post-translational modification
 
 ## Introduction
 
-The standardization of protein modification handling ensures that there is a single 
-correct approach to handling each protein modification that occurs within the PDB 
-archive. However, there are many existing PDB entries that contain protein modifications
+The standardization of PCM handling ensures that there is a single 
+correct approach to handling each PCM that occurs within the PDB 
+archive. However, there are many existing PDB entries that contain PCMs
 which do not follow these handling conventions. 
 
-As part of the protein modification remediation project, all entries containing protein 
-modifications are being re-released to add the new protein modification data category 
-described [here](Protein_modifications.md). During this process, any protein modifications
+As part of the PCM remediation project, all entries containing protein 
+modifications are being re-released to add the new PCM data category 
+described [here](Protein_modifications.md). During this process, any PCMs
 that are incorrectly handled within a PDB entry are amended to ensure that they are 
 consistently handled. 
 
 In this document, some examples are provided describing the processes that are being 
-performed to standardize protein modification handling in PDB entries. 
+performed to standardize PCM handling in PDB entries. 
 
 The following datasets provide a list of all the standardization processes being 
 performed:
@@ -54,7 +54,7 @@ A full set of CCDs being replaced is available [here](data/summaries/ccds_split.
 ### Merging CCDs
 
 In some instances, a linked modification group is inconsistently used to describe a 
-protein modification that should be handled as a peptide residue within the polypeptide 
+PCM that should be handled as a peptide residue within the polypeptide 
 sequence. For example, phosphoserine can be inconsistently described 
 using two CCDs, serine (SER) and phosphate (PO4) rather than the phosphoserine CCD (SEP).
 This is because this is a 'Named protein modification' and so should be handled as a 
@@ -70,7 +70,7 @@ A full set of CCDs being replaced is available [here](data/summaries/ccds_merge.
 
 ### Replacing CCDs
 
-In some instances, a CCD ID is incorrectly used to describe a protein modification where
+In some instances, a CCD ID is incorrectly used to describe a PCM where
 another existing CCD already describes the modification. One example of this is the use 
 of CCDs to describe Heme (HEM) and Heme C (HEC). HEM should be used exclusively to 
 describe non-covalently bound heme, whereas HEC should be used to describe covalently 
@@ -112,7 +112,7 @@ available [here](data/summaries/ccds_to_add_or_remove_from_peptide_seq.csv).
 
 ### Renaming CCDs
 
-As part of the protein modification remediation process, many CCDs that describe protein
+As part of the PCM remediation process, many CCDs that describe protein
 modifications are being renamed to make them more findable and remove ambiguities in 
 their naming. For example, the CCD MLZ describes the methylation of the side chain 
 nitrogen of lysine, currently it is named 'N-METHYL-LYSINE' however this name is misleading, 
@@ -129,7 +129,7 @@ A full set of CCDs being renamed is available [here](data/summaries/ccds_rename.
 
 ### Changing CCD Parents
 
-As part of the protein modification remediation process, many CCDs that describe protein
+As part of the PCM remediation process, many CCDs that describe protein
 modifications are having their parent residues updated. For example, the CCD SOQ is the 
 CCD that describes N-METHYL-ASPARTIC ACID, however it is currently annotated as not 
 having a parent residue. It is a natural modification to Aspartic acid and so the parent 

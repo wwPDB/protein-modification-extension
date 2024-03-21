@@ -2,7 +2,7 @@
 
 TODO:
 - Need to put legend somewhere
-- Improve the description of the biological_function items
+- Provide a more clear definition of what is in scope of PCM
 
 ## Sections
 
@@ -20,33 +20,33 @@ PTM - Post-translational modification
 ## Introduction
 
 As of May 2024, the PDB archive stores >80,000 macromolecular structures that contain at 
-least one protein modification. These modifications are highly diverse, ranging from small 
+least one protein chemical modification (PCM). These modifications are highly diverse, ranging from small 
 compounds (e.g. methylation) to very large polymeric compounds (e.g. glycosylation). This 
 makes it challenging to represent them in format that is consistent and accessible  to 
 the community.
 
-This year, all entries containing protein modifications will be remediated to standardize 
-and enrich the protein modification data that they contain. This process will involve: 
+This year, all entries containing PCMs will be remediated to standardize 
+and enrich the PCM data that they contain. This process will involve: 
 
-- A standardized representation of all protein modifications observed in PDB entries
-- New PDB entry data categories that summarise the protein modifications the entry contains
-- New CCD definition data categories that summarise the protein modifications described the chemical unit
-- Enriched descriptions of the protein modifications described in the PDB archive
+- A standardized representation of all PCMs observed in PDB entries
+- New PDB entry data categories that summarise the PCMs the entry contains
+- New CCD definition data categories that summarise the PCMs described the chemical unit
+- Enriched descriptions of the PCMs described in the PDB archive
 
-The standardization and enrichment of protein modification information across all PDB 
-entries will make protein modification data more Findable, Accessible, Interoperable and 
+The standardization and enrichment of PCM information across all PDB 
+entries will make PCM data more Findable, Accessible, Interoperable and 
 Reusable (FAIR). Together, this will support the wider usage and analysis of protein 
 modification data in the PDB archive.  
 
 ## New CCD Data Categories
 
-To provide a summary of the protein modifications that are available in the PDB archive,
+To provide a summary of the PCMs that are available in the PDB archive,
 new data categories have been added to CCD files to state whether the CCD can be used to
-describe a protein modification and to list all the protein modifications that a CCD can describe.
+describe a PCM and to list all the PCMs that a CCD can describe.
 
 ### _chem_comp.pdbx_pcm
 
-Can the CCD be used to describe a protein modification?
+Can the CCD be used to describe a PCM?
 
 | Accepted values |
 |-----------------|
@@ -54,18 +54,18 @@ Can the CCD be used to describe a protein modification?
 | N               |
 
 When the value is set to N, this indicates that this CCD should never be used to 
-describe a protein modification and instead another CCD exists that can be used to 
+describe a PCM and instead another CCD exists that can be used to 
 describe the modification. For example, the modification of lysine with pyridoxal 
 phosphate can be handled in two ways:
 
 <img src="imgs/LLP_or_PLP_LYS.png" alt="LLP_or_PLP_LYS" width="600px">
 
 In this example, the value of _chem_comp.pdbx_pcm is set to 'Y' for LLP and 'N' for PLP. 
-This ensures that PLP is not used to describe this protein modification.
+This ensures that PLP is not used to describe this PCM.
 
 ### _pdbx_chem_comp_pcm
 
-This new category contains a list of all the protein modifications that the CCD can 
+This new category contains a list of all the PCMs that the CCD can 
 describe along with additional information about the modification.
 
 For example, in the phosphoserine CCD (SEP) this category contains the following data:
@@ -84,8 +84,8 @@ Where a CCD describes multiple modifications, this category contains multiple ro
 
 
 For linked modification groups, the chemical unit can be linked to multiple amino 
-acid residues to describe different protein modifications. Within _pdbx_chem_comp_pcm, 
-each of these protein modifications is described by a separate row. For example, PLM is 
+acid residues to describe different PCMs. Within _pdbx_chem_comp_pcm, 
+each of these PCMs is described by a separate row. For example, PLM is 
 used to describe palmitoylation, a type of lipidation:
 
 | pcm_id | comp_id | modified_residue_id | type           | category         | position              | polypeptide_position | comp_id_linking_atom | modified_residue_id_linking_atom | uniprot_specific_ptm_accession | uniprot_generic_ptm_accession |
@@ -104,12 +104,12 @@ A full description of all the items in this category can be found in the
 
 ### Protein Modification Categories
 
-Due to the diversity of protein modifications, not all modifications can be handled 
-using the same approach. Therefore, protein modifications have been grouped into broad
+Due to the diversity of PCMs, not all modifications can be handled 
+using the same approach. Therefore, PCMs have been grouped into broad
 categories annotated in _pdbx_chem_comp_pcm.category. Within each category, the protein 
 modifications are handled consistently.
 
-There are 4 approaches to handling protein modifications:
+There are 4 approaches to handling PCMs:
 
 | Approach                  | Categories                                                                                                                                                                                | Examples                                                              |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
@@ -123,7 +123,7 @@ A full list of the values in the controlled vocabulary of this category can be f
 
 #### Modifications that are part of the peptide residue
 
-Most small and well-known protein modifications are in the category 'Named protein modification'.
+Most small and well-known PCMs are in the category 'Named protein modification'.
 This covers all PTMs that are not explicitly covered by another category, including 
 phosphorylation and methylations. 
 
@@ -154,7 +154,7 @@ reasons this might be the case:
 | Modification covalently bonds to multiple peptide residues | Crosslinker, Heme/heme-like                                            |
 
 In these cases, the CCD that describes the modification group contains the details of 
-all the protein modifications that it can form. For example, the CCD for palmitic acid (PLM) 
+all the PCMs that it can form. For example, the CCD for palmitic acid (PLM) 
 describes all the palmitoylations observed in the PDB archive.
 
 <img src="imgs/linked_mod.png" alt="linked_mod" width="300px">
@@ -162,7 +162,7 @@ describes all the palmitoylations observed in the PDB archive.
 
 #### Modifications that are direct covalent bonds
 
-Some protein modifications have no modification group and are instead direct covalent 
+Some PCMs have no modification group and are instead direct covalent 
 bonds between two peptide residues. The most common example of this are disulfide 
 bridges, however, there are other such modifications, including isopeptide 
 bonds, Selenocysteine-Selenocysteine bonds and peptide 
@@ -184,7 +184,7 @@ modifications that are handled in this way.
 
 ### Protein Modification Types
 
-The protein modification categories described above define broad groups of modifications.
+The PCM categories described above define broad groups of modifications.
 Within each modification category, more specific descriptions of the modification are 
 defined in the item _pdbx_chem_comp_pcm.type. For example, within the category, 
 'Lipid/lipid-like' there are the modifications 'Palmitoylation', 'Myristoylation', etc.
@@ -202,7 +202,7 @@ largest number of modification types, including:
 - Oxidation
 - Hydroxylation
 
-Not all modifications are assigned a protein modification type. This can be for several 
+Not all modifications are assigned a PCM type. This can be for several 
 reasons, including:
 
 | Rationale                                                                 | Examples                      |
@@ -216,16 +216,16 @@ A full list of the values in the controlled vocabulary of this category can be f
 
 ### Enriched Annotation
 
-In addition to the annotation of a protein modification's type and category, additional 
+In addition to the annotation of a PCM's type and category, additional 
 information is recorded to describe the modification. 
 
 #### Modified residue
 
-This defines the residue that has been modified as part of the protein modification.
+This defines the residue that has been modified as part of the PCM.
 It is annotated in the item _pdbx_chem_comp_pcm.modified_residue_id and can have the 
 following values:
 
-For protein modifications that are defined as part of a peptide residue, this value is 
+For PCMs that are defined as part of a peptide residue, this value is 
 the parent residue CCD ID. For example, the parent of phosphoserine (SEP) is serine (SER).
 
 For linked modifications it is the peptide residue that the modification group is 
@@ -234,7 +234,7 @@ is LYS.
 
 #### Linking atoms
 
-For linked protein modifications, the two atom names that link the peptide residue to 
+For linked PCMs, the two atom names that link the peptide residue to 
 the modification group are annotated. 
 
 These are annotated in the CCD items: 
@@ -276,7 +276,7 @@ _pdbx_chem_comp_pcm.uniprot_specific_ptm_accession
 _pdbx_chem_comp_pcm.uniprot_generic_ptm_accession
 
 There is some overlap in the PTM definitions in the UniProt controlled vocabulary. This 
-is because some of the UniProt definitions refer to protein modifications that are not
+is because some of the UniProt definitions refer to PCMs that are not
 chemically unique.
 
 For example there are 3 definitions for Phosphohistidine: 
@@ -302,7 +302,7 @@ In this example, these UniProt IDs would be mapped to CCD IDs in the following w
 
 ### _pdbx_entry_details.has_protein_modification
 
-Does the entry contain any protein modifications?
+Does the entry contain any PCMs?
 
 | Accepted values |
 |-----------------|
@@ -311,25 +311,25 @@ Does the entry contain any protein modifications?
 
 ### _pdbx_modification_feature
 
-This new category contains a list of all the protein modifications that the occur within 
+This new category contains a list of all the PCMs that the occur within 
 the PDB entry, providing details that enable the modification to be located within the 
 structure. 
 
 Most of the information in _pdbx_modification_feature is inherited from the category _struct_conn
-that contains the details of all the covalent bonds related to protein modifications.
+that contains the details of all the covalent bonds related to PCMs.
 
 Within _pdbx_modification_feature, modifications are handled slightly differently 
 depending on how the modification category is handled. 
 
-For protein modifications which are defined as part of peptide residue 
+For PCMs which are defined as part of peptide residue 
 (e.g. phosphoserine), the modification is defined by one CCD and so the items describing 
 the 'modified residue' are not filled.
 
-For protein modifications that are direct covalent bonds between two peptide residues 
+For PCMs that are direct covalent bonds between two peptide residues 
 (e.g. a disulfide bridge), there are two peptide residues that describe the modification 
 Therefore, the 'modified residue' items describe the second peptide residue.
 
-The entry 4ZPZ provides an example of how these two protein modifications are handled 
+The entry 4ZPZ provides an example of how these two PCMs are handled 
 in _pdbx_modification_feature because it contains 2 phosphoserines and 1 disulfide bridge:
 
 | ordinal | label_comp_id | label_asym_id | label_seq_id | modified_residue_<br/>label_comp_id | modified_residue_<br/>label_asym_id | modified_residue_<br/>label_seq_id | auth_comp_id | auth_asym_id | auth_seq_id | PDB_ins_code | symmetry | modified_residue_<br/>auth_comp_id | modified_residue_<br/>auth_asym_id | modified_residue_<br/>auth_seq_id | modified_residue_<br/>PDB_ins_code | modified_residue_<br/>symmetry | comp_id_linking_atom | modified_residue_<br/>comp_id_linking_atom | modified_residue_id | ref_pcm_id | ref_comp_id | type            | category                   | biological_function | biological_function_details |
@@ -343,7 +343,7 @@ For linked modifications (e.g. myristoylation) the items describing the 'modifie
 provide details that identify the peptide residue that is being modified by the 
 modification group.
 
-The entry 2K4H provides an example of how linked protein modifications are handled 
+The entry 2K4H provides an example of how linked PCMs are handled 
 in _pdbx_modification_feature because it contains 1 glycine myristoylation:
 
 | ordinal | label_comp_id | label_asym_id | label_seq_id | modified_residue_<br/>label_comp_id | modified_residue_<br/>label_asym_id | modified_residue_<br/>label_seq_id | auth_comp_id | auth_asym_id | auth_seq_id | PDB_ins_code | symmetry | modified_residue_<br/>auth_comp_id | modified_residue_<br/>auth_asym_id | modified_residue_<br/>auth_seq_id | modified_residue_<br/>PDB_ins_code | modified_residue_<br/>symmetry | comp_id_linking_atom | modified_residue_<br/>comp_id_linking_atom | modified_residue_id | ref_pcm_id | ref_comp_id | type           | category         | biological_function | biological_function_details |
@@ -354,7 +354,7 @@ in _pdbx_modification_feature because it contains 1 glycine myristoylation:
 #### Items obtained from _struct_conn
 
 For all rows in _pdbx_modification_feature, the values of the items 'label_comp_id' 
-through to 'modified_residue_comp_id_linking_atom' are obtained from _struct_conn.
+through to 'modified_residue_id_linking_atom' are obtained from _struct_conn.
 
 These items provide all the identifiers required to unambiguously locate the protein 
 modifications within the structure.
@@ -370,7 +370,7 @@ above:
 - category
 
 The items ref_pcm_id and ref_comp_id enable the precise identification of the
-protein modification that is described in more detail within the CCD definition.
+PCM that is described in more detail within the CCD definition.
 
 For example, the myristoylation in the example 2K4H above. These values are:
 
@@ -383,14 +383,6 @@ This refers to row 2 of pdbx_chem_comp_pcm within the CCD MYR.
 Through this reference the other items are imported from the CCD file to 
 _pdbx_modification_feature within the mmCIF file. This includes data about the protein 
 modification type, category and parent residue.
-
-#### Biological function items
-
-These items can be populated with information about the biological function of the 
-protein modification site. They will not be populated during the initial remediation 
-process, however, the new categories enable the site-specific mapping of PDB protein 
-modifications to UniProt PTMs. Therefore, these items will be populated with functional 
-data obtained from UniProt.
 
 ## Acknowledgements
 The protein chemical modifications (PCMs) and post translational modifications (PTMs) 
