@@ -1594,19 +1594,17 @@ _pdbx_modification_feature.modified_residue_auth_seq_id
 _pdbx_modification_feature.modified_residue_PDB_ins_code 
 _pdbx_modification_feature.modified_residue_symmetry 
 _pdbx_modification_feature.comp_id_linking_atom 
-_pdbx_modification_feature.modified_residue_id_linking_atom
+_pdbx_modification_feature.modified_residue_id_linking_atom 
 _pdbx_modification_feature.modified_residue_id 
 _pdbx_modification_feature.ref_pcm_id 
 _pdbx_modification_feature.ref_comp_id 
 _pdbx_modification_feature.type 
 _pdbx_modification_feature.category 
-_pdbx_modification_feature.biological_function 
-_pdbx_modification_feature.biological_function_details 
-1 NAG B .   ASN A 437 NAG B 1   ? 1_555 ASN A 437 ? 1_555 C1 ND2 ASN 14 NAG . Carbohydrate       ? ? 
-2 NAG C .   ASN A 445 NAG A 900 ? 1_555 ASN A 445 ? 1_555 C1 ND2 ASN 14 NAG . Carbohydrate       ? ? 
-3 CYS A 251 CYS A 271 CYS A 251 ? 1_555 CYS A 271 ? 1_555 SG SG  .   .  .   ? 'Disulfide bridge' ? ? 
-4 CYS A 293 CYS A 308 CYS A 293 ? 1_555 CYS A 308 ? 1_555 SG SG  .   .  .   ? 'Disulfide bridge' ? ? 
-5 CYS A 79  CYS A 345 CYS A 79  ? 1_555 CYS A 345 ? 1_555 SG SG  .   .  .   ? 'Disulfide bridge' ? ? 
+1 NAG B .   ASN A 437 NAG B 1   ? 1_555 ASN A 437 ? 1_555 C1 ND2 ASN 14 NAG . Carbohydrate       
+2 NAG C .   ASN A 445 NAG A 900 ? 1_555 ASN A 445 ? 1_555 C1 ND2 ASN 14 NAG . Carbohydrate       
+3 CYS A 251 CYS A 271 CYS A 251 ? 1_555 CYS A 271 ? 1_555 SG SG  .   .  .   ? 'Disulfide bridge' 
+4 CYS A 293 CYS A 308 CYS A 293 ? 1_555 CYS A 308 ? 1_555 SG SG  .   .  .   ? 'Disulfide bridge' 
+5 CYS A 79  CYS A 345 CYS A 79  ? 1_555 CYS A 345 ? 1_555 SG SG  .   .  .   ? 'Disulfide bridge' 
 # 
 _pdbx_entry_details.entry_id                   1AC5 
 _pdbx_entry_details.compound_details           ? 

@@ -1198,17 +1198,15 @@ _pdbx_modification_feature.modified_residue_auth_seq_id
 _pdbx_modification_feature.modified_residue_PDB_ins_code 
 _pdbx_modification_feature.modified_residue_symmetry 
 _pdbx_modification_feature.comp_id_linking_atom 
-_pdbx_modification_feature.modified_residue_id_linking_atom
+_pdbx_modification_feature.modified_residue_id_linking_atom 
 _pdbx_modification_feature.modified_residue_id 
 _pdbx_modification_feature.ref_pcm_id 
 _pdbx_modification_feature.ref_comp_id 
 _pdbx_modification_feature.type 
 _pdbx_modification_feature.category 
-_pdbx_modification_feature.biological_function 
-_pdbx_modification_feature.biological_function_details 
-1 SEP A 65 .   . .  SEP A 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ? 
-2 SEP B 65 .   . .  SEP B 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ? 
-3 CYS A 46 CYS B 46 CYS A 46 ? 1_555 CYS B 46 ? 1_555 SG SG .   . .   ?               'Disulfide bridge'           ? ? 
+1 SEP A 65 .   . .  SEP A 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' 
+2 SEP B 65 .   . .  SEP B 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' 
+3 CYS A 46 CYS B 46 CYS A 46 ? 1_555 CYS B 46 ? 1_555 SG SG .   . .   ?               'Disulfide bridge'           
 # 
 _pdbx_entry_details.entry_id                   4ZPZ 
 _pdbx_entry_details.compound_details           ? 

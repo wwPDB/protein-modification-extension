@@ -663,19 +663,17 @@ _pdbx_modification_feature.modified_residue_auth_seq_id
 _pdbx_modification_feature.modified_residue_PDB_ins_code 
 _pdbx_modification_feature.modified_residue_symmetry 
 _pdbx_modification_feature.comp_id_linking_atom 
-_pdbx_modification_feature.modified_residue_id_linking_atom
+_pdbx_modification_feature.modified_residue_id_linking_atom 
 _pdbx_modification_feature.modified_residue_id 
 _pdbx_modification_feature.ref_pcm_id 
 _pdbx_modification_feature.ref_comp_id 
 _pdbx_modification_feature.type 
 _pdbx_modification_feature.category 
-_pdbx_modification_feature.biological_function 
-_pdbx_modification_feature.biological_function_details 
-1 ACE A 1  CYS A 2  ACE A 2  ? 1_555 CYS A 3  ? 1_555 .  .  CYS 11 ACE ? 'Terminal acetylation' ? ? 
-2 ACE B 1  CYS B 2  ACE B 2  ? 1_555 CYS B 3  ? 1_555 .  .  CYS 11 ACE ? 'Terminal acetylation' ? ? 
-3 NH2 A 34 LEU A 33 NH2 A 35 ? 1_555 LEU A 34 ? 1_555 .  .  LEU 14 NH2 ? 'Terminal amidation'   ? ? 
-4 NH2 B 34 LEU B 33 NH2 B 35 ? 1_555 LEU B 34 ? 1_555 .  .  LEU 14 NH2 ? 'Terminal amidation'   ? ? 
-5 CYS A 2  CYS B 2  CYS A 3  ? 1_555 CYS B 3  ? 1_555 SG SG .   .  .   ? 'Disulfide bridge'     ? ? 
+1 ACE A 1  CYS A 2  ACE A 2  ? 1_555 CYS A 3  ? 1_555 .  .  CYS 11 ACE ? 'Terminal acetylation' 
+2 ACE B 1  CYS B 2  ACE B 2  ? 1_555 CYS B 3  ? 1_555 .  .  CYS 11 ACE ? 'Terminal acetylation' 
+3 NH2 A 34 LEU A 33 NH2 A 35 ? 1_555 LEU A 34 ? 1_555 .  .  LEU 14 NH2 ? 'Terminal amidation'   
+4 NH2 B 34 LEU B 33 NH2 B 35 ? 1_555 LEU B 34 ? 1_555 .  .  LEU 14 NH2 ? 'Terminal amidation'   
+5 CYS A 2  CYS B 2  CYS A 3  ? 1_555 CYS B 3  ? 1_555 SG SG .   .  .   ? 'Disulfide bridge'     
 # 
 _pdbx_entry_details.entry_id                   1A93 
 _pdbx_entry_details.compound_details           ? 

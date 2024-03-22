@@ -634,18 +634,16 @@ _pdbx_modification_feature.modified_residue_auth_seq_id
 _pdbx_modification_feature.modified_residue_PDB_ins_code 
 _pdbx_modification_feature.modified_residue_symmetry 
 _pdbx_modification_feature.comp_id_linking_atom 
-_pdbx_modification_feature.modified_residue_id_linking_atom
+_pdbx_modification_feature.modified_residue_id_linking_atom 
 _pdbx_modification_feature.modified_residue_id 
 _pdbx_modification_feature.ref_pcm_id 
 _pdbx_modification_feature.ref_comp_id 
 _pdbx_modification_feature.type 
 _pdbx_modification_feature.category 
-_pdbx_modification_feature.biological_function 
-_pdbx_modification_feature.biological_function_details 
-1 FUC B .  SER A 16 FUC A 91 ? 1_555 SER A 60 ? 1_555 C1 OG SER 1 FUC . Carbohydrate       ? ? 
-2 CYS A 11 CYS A 26 CYS A 55 ? 1_555 CYS A 70 ? 1_555 SG SG .   . .   ? 'Disulfide bridge' ? ? 
-3 CYS A 28 CYS A 37 CYS A 72 ? 1_555 CYS A 81 ? 1_555 SG SG .   . .   ? 'Disulfide bridge' ? ? 
-4 CYS A 6  CYS A 17 CYS A 50 ? 1_555 CYS A 61 ? 1_555 SG SG .   . .   ? 'Disulfide bridge' ? ? 
+1 FUC B .  SER A 16 FUC A 91 ? 1_555 SER A 60 ? 1_555 C1 OG SER 1 FUC . Carbohydrate       
+2 CYS A 11 CYS A 26 CYS A 55 ? 1_555 CYS A 70 ? 1_555 SG SG .   . .   ? 'Disulfide bridge' 
+3 CYS A 28 CYS A 37 CYS A 72 ? 1_555 CYS A 81 ? 1_555 SG SG .   . .   ? 'Disulfide bridge' 
+4 CYS A 6  CYS A 17 CYS A 50 ? 1_555 CYS A 61 ? 1_555 SG SG .   . .   ? 'Disulfide bridge' 
 # 
 _pdbx_entry_details.entry_id                   1FFM 
 _pdbx_entry_details.compound_details           ? 
