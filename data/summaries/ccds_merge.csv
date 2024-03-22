@@ -1,8 +1,0 @@
-Same as ccds_to_split.csv but without the columns:
-- entries_affected
-- comments
-- link_atom_1
-- link_atom_2
-
-Also rename the columns so they're clearer and more consistent with other CSVs
-

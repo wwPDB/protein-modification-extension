@@ -3,9 +3,11 @@
 ## Sections
 
 - [Glossary of Terms](#glossary-of-terms)
+- [Figure Legend](#figure-legend)
 - [Introduction](#introduction)
 - [New CCD Data Categories](#new-ccd-data-categories)
 - [New mmCIF Data Categories](#new-mmcif-data-categories)
+- [Acknowledgements](#acknowledgements)
 
 ## Glossary of Terms
 
