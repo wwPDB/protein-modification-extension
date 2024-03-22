@@ -1,9 +1,5 @@
 # Protein Modifications
 
-TODO:
-- Need to put legend somewhere
-- Provide a more clear definition of what is in scope of PCM
-
 ## Sections
 
 - [Glossary of Terms](#glossary-of-terms)
@@ -16,6 +12,10 @@ TODO:
 PCM - Protein chemical modification
 
 PTM - Post-translational modification
+
+## Figure Legend
+
+<img src="imgs/pcm_legend.png" alt="linked_mod" width="150px">
 
 ## Introduction
 
@@ -138,8 +138,6 @@ group.
 
 <img src="imgs/single_ccd_mod.png" alt="single_ccd_mod" width="300px">
 
-
-
 #### Modifications that are linked to a peptide residue
 
 Not all modifications can be defined as part of the peptide residue and instead need to
@@ -158,7 +156,6 @@ all the PCMs that it can form. For example, the CCD for palmitic acid (PLM)
 describes all the palmitoylations observed in the PDB archive.
 
 <img src="imgs/linked_mod.png" alt="linked_mod" width="300px">
-
 
 #### Modifications that are direct covalent bonds
 
