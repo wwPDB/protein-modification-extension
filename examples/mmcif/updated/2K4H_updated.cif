@@ -874,9 +874,11 @@ _pdbx_modification_feature.ordinal                            1
 _pdbx_modification_feature.label_comp_id                      MYR 
 _pdbx_modification_feature.label_asym_id                      B 
 _pdbx_modification_feature.label_seq_id                       . 
+_pdbx_modification_feature.label_alt_id                       ? 
 _pdbx_modification_feature.modified_residue_label_comp_id     GLY 
 _pdbx_modification_feature.modified_residue_label_asym_id     A 
 _pdbx_modification_feature.modified_residue_label_seq_id      1 
+_pdbx_modification_feature.modified_residue_label_alt_id      ? 
 _pdbx_modification_feature.auth_comp_id                       MYR 
 _pdbx_modification_feature.auth_asym_id                       A 
 _pdbx_modification_feature.auth_seq_id                        1 

@@ -1003,9 +1003,11 @@ _pdbx_modification_feature.ordinal
 _pdbx_modification_feature.label_comp_id 
 _pdbx_modification_feature.label_asym_id 
 _pdbx_modification_feature.label_seq_id 
+_pdbx_modification_feature.label_alt_id 
 _pdbx_modification_feature.modified_residue_label_comp_id 
 _pdbx_modification_feature.modified_residue_label_asym_id 
 _pdbx_modification_feature.modified_residue_label_seq_id 
+_pdbx_modification_feature.modified_residue_label_alt_id 
 _pdbx_modification_feature.auth_comp_id 
 _pdbx_modification_feature.auth_asym_id 
 _pdbx_modification_feature.auth_seq_id 
@@ -1023,8 +1025,8 @@ _pdbx_modification_feature.ref_pcm_id
 _pdbx_modification_feature.ref_comp_id 
 _pdbx_modification_feature.type 
 _pdbx_modification_feature.category 
-1 HEC B . CYS A 11 HEC A 93 ? 1_555 CYS A 32 ? 1_555 CAB SG CYS 1 HEC None Heme/heme-like 
-2 HEC B . CYS A 14 HEC A 93 ? 1_555 CYS A 35 ? 1_555 CAC SG CYS 2 HEC None Heme/heme-like 
+1 HEC B . ? CYS A 11 ? HEC A 93 ? 1_555 CYS A 32 ? 1_555 CAB SG CYS 1 HEC None Heme/heme-like 
+2 HEC B . ? CYS A 14 ? HEC A 93 ? 1_555 CYS A 35 ? 1_555 CAC SG CYS 2 HEC None Heme/heme-like 
 # 
 loop_
 _atom_site.group_PDB 
