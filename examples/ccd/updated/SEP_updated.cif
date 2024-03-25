@@ -134,13 +134,6 @@ _pdbx_chem_comp_synonyms.name         PHOSPHONOSERINE
 _pdbx_chem_comp_synonyms.provenance   ? 
 _pdbx_chem_comp_synonyms.type         ? 
 # 
-loop_
-_pdbx_chem_comp_synonyms.ordinal
-_pdbx_chem_comp_synonyms.comp_id
-_pdbx_chem_comp_synonyms.name
-1 	SEP 	Phosphonoserine
-2 	SEP 	O-phospho-L-serine
-#
 _pdbx_chem_comp_pcm.pcm_id                             1
 _pdbx_chem_comp_pcm.comp_id                            SEP
 _pdbx_chem_comp_pcm.modified_residue_id                SER
