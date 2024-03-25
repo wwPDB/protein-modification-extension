@@ -122,8 +122,8 @@ _pdbx_chem_comp_pcm.comp_id_linking_atom
 _pdbx_chem_comp_pcm.modified_residue_id_linking_atom
 _pdbx_chem_comp_pcm.uniprot_specific_ptm_accession
 _pdbx_chem_comp_pcm.uniprot_generic_ptm_accession
-1 FUC SER . Carbohydrate "Amino-acid side chain" "Any position" C1 OG  ? ? 
-2 FUC THR . Carbohydrate "Amino-acid side chain" "Any position" C1 OG1 ? ?
+1 FUC SER None Carbohydrate "Amino-acid side chain" "Any position" C1 OG  ? ? 
+2 FUC THR None Carbohydrate "Amino-acid side chain" "Any position" C1 OG1 ? ?
 ```
 
 | Attribute                        | Key | Required | Type           | Units | Enumerated | Bounded |
@@ -131,7 +131,7 @@ _pdbx_chem_comp_pcm.uniprot_generic_ptm_accession
 | pcm_id                           | yes | yes      | int            | None  | no         | no      |
 | comp_id                          | no  | yes      | ucode          | None  | no         | no      |
 | modified_residue_id              | no  | no       | uline          | None  | no         | no      |
-| type                             | no  | no       | line           | None  | yes        | no      |
+| type                             | no  | yes      | line           | None  | yes        | no      |
 | category                         | no  | yes      | line           | None  | yes        | no      |
 | position                         | no  | yes      | line           | None  | yes        | no      |
 | polypeptide_position             | no  | yes      | line           | None  | yes        | no      |
@@ -297,17 +297,21 @@ _pdbx_modification_feature.ordinal
 _pdbx_modification_feature.label_comp_id
 _pdbx_modification_feature.label_asym_id
 _pdbx_modification_feature.label_seq_id
+_pdbx_modification_feature.label_alt_id
 _pdbx_modification_feature.modified_residue_label_comp_id
 _pdbx_modification_feature.modified_residue_label_asym_id
 _pdbx_modification_feature.modified_residue_label_seq_id
+_pdbx_modification_feature.modified_residue_label_alt_id
 _pdbx_modification_feature.auth_comp_id
 _pdbx_modification_feature.auth_asym_id
 _pdbx_modification_feature.auth_seq_id
 _pdbx_modification_feature.PDB_ins_code
+_pdbx_modification_feature.symmetry
 _pdbx_modification_feature.modified_residue_auth_comp_id
 _pdbx_modification_feature.modified_residue_auth_asym_id
 _pdbx_modification_feature.modified_residue_auth_seq_id
 _pdbx_modification_feature.modified_residue_PDB_ins_code
+_pdbx_modification_feature.modified_residue_symmetry
 _pdbx_modification_feature.comp_id_linking_atom
 _pdbx_modification_feature.modified_residue_id_linking_atom
 _pdbx_modification_feature.modified_residue_id
@@ -317,9 +321,9 @@ _pdbx_modification_feature.type
 _pdbx_modification_feature.category
 _pdbx_modification_feature.biological_function
 _pdbx_modification_feature.biological_function_details
-1 CYS B 46 CYS A 46 CYS B 46 ? CYS A 46 ? SG SG .   . .   .               Disulfide bridge             ? ?
-2 SEP A 65 .   . .  SEP A 65 ? .   . .  . .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ?
-3 SEP B 65 .   . .  SEP B 65 ? .   . .  . .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ?
+1 SEP A 65 ? .   . .  . SEP A 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ?
+2 SEP B 65 ? .   . .  . SEP B 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ?
+3 CYS A 46 ? CYS B 46 ? CYS A 46 ? 1_555 CYS B 46 ? 1_555 SG SG .   . .   None            'Disulfide bridge'           ? ?
 ```
 
 Example 2 - An example of the category in an entry that contains a two cysteine 
@@ -331,17 +335,21 @@ _pdbx_modification_feature.ordinal
 _pdbx_modification_feature.label_comp_id
 _pdbx_modification_feature.label_asym_id
 _pdbx_modification_feature.label_seq_id
+_pdbx_modification_feature.label_alt_id
 _pdbx_modification_feature.modified_residue_label_comp_id
 _pdbx_modification_feature.modified_residue_label_asym_id
 _pdbx_modification_feature.modified_residue_label_seq_id
+_pdbx_modification_feature.modified_residue_label_alt_id
 _pdbx_modification_feature.auth_comp_id
 _pdbx_modification_feature.auth_asym_id
 _pdbx_modification_feature.auth_seq_id
 _pdbx_modification_feature.PDB_ins_code
+_pdbx_modification_feature.symmetry
 _pdbx_modification_feature.modified_residue_auth_comp_id
 _pdbx_modification_feature.modified_residue_auth_asym_id
 _pdbx_modification_feature.modified_residue_auth_seq_id
 _pdbx_modification_feature.modified_residue_PDB_ins_code
+_pdbx_modification_feature.modified_residue_symmetry
 _pdbx_modification_feature.comp_id_linking_atom
 _pdbx_modification_feature.modified_residue_id_linking_atom
 _pdbx_modification_feature.modified_residue_id
@@ -351,10 +359,10 @@ _pdbx_modification_feature.type
 _pdbx_modification_feature.category
 _pdbx_modification_feature.biological_function
 _pdbx_modification_feature.biological_function_details
-1 CSO C 32 .   . .  CSO C 32   ? .   . .  . .  .  CYS 1 CSO Hydroxylation  'Named protein modification' ? ?
-2 CSO D 32 .   . .  CSO D 32   ? .   . .  . .  .  CYS 1 CSO Hydroxylation  'Named protein modification' ? ?
-3 PLM E .  CYS A 82 PLM A 1068 ? CYS A 68 ? C1 SG CYS 6 PLM Palmitoylation 'Lipid/lipid-like'           ? ?
-4 PLM F .  CYS B 82 PLM B 1068 ? CYS B 68 ? C1 SG CYS 6 PLM Palmitoylation 'Lipid/lipid-like'           ? ?
+1 CSO C 32 ? .   . .  . CSO C 32   ? 1_555 .   . .  . .     .  .  CYS 1 CSO Hydroxylation  'Named protein modification' ? ? 
+2 CSO D 32 ? .   . .  . CSO D 32   ? 1_555 .   . .  . .     .  .  CYS 1 CSO Hydroxylation  'Named protein modification' ? ?
+3 PLM E .  ? CYS A 82 ? PLM A 1068 ? 1_555 CYS A 68 ? 1_555 C1 SG CYS 6 PLM Palmitoylation Lipid/lipid-like             ? ?
+4 PLM F .  ? CYS B 82 ? PLM B 1068 ? 1_555 CYS B 68 ? 1_555 C1 SG CYS 6 PLM Palmitoylation Lipid/lipid-like             ? ?
 ```
 
 | Attribute                        | Key | Required | Type   | Units | Enumerated | Bounded |
@@ -363,9 +371,11 @@ _pdbx_modification_feature.biological_function_details
 | label_comp_id                    | no  | yes      | ucode  | None  | no         | no      |
 | label_asym_id                    | no  | yes      | code   | None  | no         | no      |
 | label_seq_id                     | no  | no       | int    | None  | no         | no      |
+| label_alt_id                     | no  | no       | code   | None  | no         | no      |
 | modified_residue_label_comp_id   | no  | no       | ucode  | None  | no         | no      |
 | modified_residue_label_asym_id   | no  | no       | code   | None  | no         | no      |
 | modified_residue_label_seq_id    | no  | no       | int    | None  | no         | no      |
+| modified_residue_label_alt_id    | no  | no       | code   | None  | no         | no      |
 | auth_comp_id                     | no  | no       | code   | None  | no         | no      |
 | auth_asym_id                     | no  | no       | code   | None  | no         | no      |
 | auth_seq_id                      | no  | no       | code   | None  | no         | no      |
@@ -422,6 +432,16 @@ This data item is a pointer to _atom_site.label_seq_id in the
 ATOM_SITE category.
 ```
 
+#### _pdbx_chem_comp_pcm.label_alt_id
+
+```
+A component of the identifier for the chemical component that
+describes the protein modification.
+
+This data item is a pointer to _atom_site.label_alt_id in the
+ATOM_SITE category.
+```
+
 #### _pdbx_chem_comp_pcm.modified_residue_label_comp_id
 
 ```
@@ -449,6 +469,16 @@ A component of the identifier for the chemical component that
 is being modified.
 
 This data item is a pointer to _atom_site.label_seq_id in the 
+ATOM_SITE category.
+```
+
+#### _pdbx_chem_comp_pcm.modified_residue_label_alt_id
+
+```
+A component of the identifier for the chemical component that
+is being modified.
+
+This data item is a pointer to _atom_site.label_alt_id in the
 ATOM_SITE category.
 ```
 
@@ -492,6 +522,13 @@ This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the
 ATOM_SITE category.
 ```
 
+#### _pdbx_chem_comp_pcm.symmetry
+
+```
+Describes the symmetry operation that should be applied to the protein modification 
+group.
+```
+
 #### _pdbx_chem_comp_pcm.modified_residue_auth_comp_id
 
 ```
@@ -530,6 +567,13 @@ is being modified.
 
 This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the 
 ATOM_SITE category.
+```
+
+#### _pdbx_chem_comp_pcm.modified_residue_symmetry
+
+```
+Describes the symmetry operation that should be applied to the chemical component that 
+is being modified.
 ```
 
 #### _pdbx_chem_comp_pcm.comp_id_linking_atom
