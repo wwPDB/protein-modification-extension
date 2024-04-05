@@ -9,6 +9,6 @@ pcm annotation data that was used to populate the PCM category in the CCD files.
 remediation, indicating how the CCD file is changed.
 - [ccds_merge.csv](ccds_merge.csv) is a list of the CCDs being merged
 - [ccds_split.csv](ccds_split.csv) is a list of the CCDs being split 
-- [ccds_rename.csv](ccds_split.csv) is a list of the CCDs being renamed
-- [ccds_reparent.csv](ccds_split.csv) is a list of the CCDs having their parent residues changed
+- [ccds_rename.csv](ccds_rename.csv) is a list of the CCDs being renamed
+- [ccds_reparent.csv](ccds_reparent.csv) is a list of the CCDs having their parent residues changed
 - [prd_list.csv](prd_list.csv) is a list of all the PRD files affected by the PCM remediation

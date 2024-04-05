@@ -204,11 +204,11 @@ largest number of modification types, including:
 Not all modifications are assigned a PCM type. This can be for several 
 reasons, including:
 
-| Rationale                                                                 | Examples                      |
-|---------------------------------------------------------------------------|-------------------------------|
-| The category fully describes the modification                             | Disulfide Bridges             |
-| It is difficult to distinguish the modification group from the amino acid | Non-standard residues         |
-| The modification group is not well-known or unique to a single structure  | Heme and chromophore variants |
+| Rationale                                                                   | Examples                      |
+|-----------------------------------------------------------------------------|-------------------------------|
+| The category fully describes the modification                               | Disulfide Bridges             |
+| It is difficult to distinguish the modification group from the amino acid   | Non-standard residues         |
+| The modification group is not well-known or is unique to a single structure | Heme and chromophore variants |
 
 A full list of the values in the controlled vocabulary of this category can be found in the 
 [PDBx/mmCIF dictionary definition for this item](https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Items/_pdbx_chem_comp_pcm.type.html)
