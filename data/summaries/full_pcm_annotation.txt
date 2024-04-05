@@ -1,0 +1,4 @@
+This should be an excel spreadsheet that contains all the PCM annotations we have created
+the annotations should be generated after the link review and so should contain all the
+covalent chemical modifications for all CCDs.
+
