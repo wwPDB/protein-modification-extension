@@ -319,11 +319,9 @@ _pdbx_modification_feature.ref_pcm_id
 _pdbx_modification_feature.ref_comp_id
 _pdbx_modification_feature.type
 _pdbx_modification_feature.category
-_pdbx_modification_feature.biological_function
-_pdbx_modification_feature.biological_function_details
-1 SEP A 65 ? .   . .  . SEP A 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ?
-2 SEP B 65 ? .   . .  . SEP B 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification' ? ?
-3 CYS A 46 ? CYS B 46 ? CYS A 46 ? 1_555 CYS B 46 ? 1_555 SG SG .   . .   None            'Disulfide bridge'           ? ?
+1 SEP A 65 ? .   . .  . SEP A 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification'
+2 SEP B 65 ? .   . .  . SEP B 65 ? 1_555 .   . .  . .     .  .  SER 1 SEP Phosphorylation 'Named protein modification'
+3 CYS A 46 ? CYS B 46 ? CYS A 46 ? 1_555 CYS B 46 ? 1_555 SG SG .   . .   None            'Disulfide bridge'          
 ```
 
 Example 2 - An example of the category in an entry that contains a two cysteine 
@@ -357,12 +355,10 @@ _pdbx_modification_feature.ref_pcm_id
 _pdbx_modification_feature.ref_comp_id
 _pdbx_modification_feature.type
 _pdbx_modification_feature.category
-_pdbx_modification_feature.biological_function
-_pdbx_modification_feature.biological_function_details
-1 CSO C 32 ? .   . .  . CSO C 32   ? 1_555 .   . .  . .     .  .  CYS 1 CSO Hydroxylation  'Named protein modification' ? ? 
-2 CSO D 32 ? .   . .  . CSO D 32   ? 1_555 .   . .  . .     .  .  CYS 1 CSO Hydroxylation  'Named protein modification' ? ?
-3 PLM E .  ? CYS A 82 ? PLM A 1068 ? 1_555 CYS A 68 ? 1_555 C1 SG CYS 6 PLM Palmitoylation Lipid/lipid-like             ? ?
-4 PLM F .  ? CYS B 82 ? PLM B 1068 ? 1_555 CYS B 68 ? 1_555 C1 SG CYS 6 PLM Palmitoylation Lipid/lipid-like             ? ?
+1 CSO C 32 ? .   . .  . CSO C 32   ? 1_555 .   . .  . .     .  .  CYS 1 CSO Hydroxylation  'Named protein modification'
+2 CSO D 32 ? .   . .  . CSO D 32   ? 1_555 .   . .  . .     .  .  CYS 1 CSO Hydroxylation  'Named protein modification'
+3 PLM E .  ? CYS A 82 ? PLM A 1068 ? 1_555 CYS A 68 ? 1_555 C1 SG CYS 6 PLM Palmitoylation Lipid/lipid-like            
+4 PLM F .  ? CYS B 82 ? PLM B 1068 ? 1_555 CYS B 68 ? 1_555 C1 SG CYS 6 PLM Palmitoylation Lipid/lipid-like            
 ```
 
 | Attribute                        | Key | Required | Type   | Units | Enumerated | Bounded |
@@ -393,8 +389,6 @@ _pdbx_modification_feature.biological_function_details
 | ref_comp_id                      | no  | no       | ucode  | None  | no         | no      |
 | type                             | no  | no       | line   | None  | yes        | no      |
 | category                         | no  | yes      | line   | None  | yes        | no      |
-| biological_function              | no  | no       | code   | None  | yes        | no      |
-| biological_function_details      | no  | no       | text   | None  | no         | no      |
 
 #### _pdbx_chem_comp_pcm.ordinal
 
@@ -667,22 +661,3 @@ The category of protein modification.
 | Nucleotide monophosphate       | Nucleotide monophosphate protein modifications                                                                                                                                                                                                                                                                 |
 | Terminal acetylation           | Terminal acetylation protein modification                                                                                                                                                                                                                                                                      |
 | Terminal amidation             | Terminal amidation protein modification                                                                                                                                                                                                                                                                        |
-
-#### _pdbx_chem_comp_pcm.biological_function
-
-```
-A flag to indicate if the protein modification at this site can 
-occur naturally and that it is expected to have a biological 
-function.
-```
-
-| Allowed Values | Detail                                                   |
-|----------------|----------------------------------------------------------|
-| Y              | Protein modification has a biological function           |
-| N              | Protein modification does not have a biological function |
-
-#### _pdbx_chem_comp_pcm.biological_function_details
-
-```
-Details of the biological function of the protein modification at this site.
-```
