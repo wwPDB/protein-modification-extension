@@ -54,6 +54,8 @@ entries that contain MYK the following splitting process must be performed:
 |--------------|-----|-----------------|----------------|----------------------|
 | MYK          | \>  | LYS             | MYR            | 3U31                 |
 
+<img src="imgs/MYK_to_LYS_MYR.png" alt="MYK_to_LYS_MYR" width="600px">
+
 A full set of CCDs being split is available [here](data/summaries/ccds_split.csv).
 
 ## Merging CCDs
@@ -70,6 +72,8 @@ merging process must be performed in all of these cases:
 | Existing Peptide CCD | Existing Linked CCD | \>  | New CCD | Example PDB Entry ID |
 |----------------------|---------------------|-----|---------|----------------------|
 | SER                  | PO4                 | \>  | SEP     | 6FW5                 |
+
+<img src="imgs/SER_PO4_to_SEP.png" alt="SER_PO4_to_SEP" width="600px">
 
 A full set of CCDs being merged is available [here](data/summaries/ccds_merge.csv).
 
