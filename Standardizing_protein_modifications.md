@@ -34,15 +34,6 @@ consistently handled.
 In this document, some examples are provided describing the processes that are being 
 performed to standardize PCM handling in PDB entries.
 
-The following datasets provide a list of all the standardization processes being 
-performed:
-- [Splitting CCDs into two CCDs](data/summaries/ccds_split.csv)
-- [Merging two CCDs into one CCD](data/summaries/ccds_merge.csv)
-- [Replacing one CCD with another CCD](data/summaries/ccds_replace.csv)
-- [Adding or removing a residue from a polypeptide sequence](data/summaries/ccds_to_add_or_remove_from_peptide_seq.csv)
-- [Renaming CCDs](data/summaries/ccds_rename.csv)
-- [Changing the CCD parent residue](data/summaries/ccds_change_parent.csv)
-
 ## Splitting CCDs
 
 In some instances, a single peptide residue CCD is inconsistently used to describe a 
@@ -55,8 +46,6 @@ entries that contain MYK the following splitting process must be performed:
 | MYK          | \>  | LYS             | MYR            | 3U31                 |
 
 <img src="imgs/MYK_to_LYS_MYR.png" alt="MYK_to_LYS_MYR" width="600px">
-
-A full set of CCDs being split is available [here](data/summaries/ccds_split.csv).
 
 ## Merging CCDs
 
@@ -75,8 +64,6 @@ merging process must be performed in all of these cases:
 
 <img src="imgs/SER_PO4_to_SEP.png" alt="SER_PO4_to_SEP" width="600px">
 
-A full set of CCDs being merged is available [here](data/summaries/ccds_merge.csv).
-
 ## Replacing CCDs
 
 In some instances, a CCD ID is incorrectly used to describe a PCM where
@@ -89,8 +76,6 @@ The following replacement process must be performed in all of these cases:
 | Existing CCD | \>  | New CCD | Example PDB Entry ID |
 |--------------|-----|---------|----------------------|
 | HEM          | \>  | HEC     | 19HC                 |
-
-A full set of CCDs being replaced is available [here](data/summaries/ccds_replace.csv).
 
 ## Adding CCDs to Polypeptide Sequences
 
@@ -113,9 +98,6 @@ of these cases:
 |-----|--------------------------|----|------------------------------|----------------------|
 | MYR | Part of peptide sequence | \> | Linked to peptide N-terminus | 2NA0                 |
 
-A full set of CCDs being added or removed from polypeptide sequences is
-available [here](data/summaries/ccds_to_add_or_remove_from_peptide_seq.csv).
-
 ## Renaming CCDs
 
 As part of the PCM remediation process, many CCDs that describe protein
@@ -131,8 +113,6 @@ nitrogen. It will be renamed in the following process:
 
 This naming must be reflected in all entries that contain the CCD MLZ.
 
-A full set of CCDs being renamed is available [here](data/summaries/ccds_rename.csv).
-
 ## Changing CCD Parents
 
 As part of the PCM remediation process, many CCDs that describe protein
@@ -146,8 +126,6 @@ residue will be changed to ASP. The parent will be updated in the following proc
 | SOQ | None           | \> | ASP        | 7AZ6                 |
 
 This change in parent must be reflected in all entries that contain the CCD SOQ.
-
-A full set of CCDs having parents changed is available [here](data/summaries/ccds_change_parent.csv).
 
 ## Acknowledgements
 The protein chemical modifications (PCMs) and post translational modifications (PTMs) 
