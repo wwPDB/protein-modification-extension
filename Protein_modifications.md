@@ -32,7 +32,7 @@ and enrich the PCM data that they contain. This process will involve:
 
 - A standardized representation of all PCMs observed in PDB entries
 - New PDB entry data categories that summarise the PCMs the entry contains
-- New CCD definition data categories that summarise the PCMs described the chemical unit
+- New CCD definition data categories that summarise the PCMs described by the chemical unit
 - Enriched descriptions of the PCMs described in the PDB archive
 
 The standardization and enrichment of PCM information across all PDB 
@@ -271,8 +271,8 @@ These provide direct mappings to the UniProt PTM definitions defined in the
 [UniProt Controlled Vocabulary of Posttranslational Modifications](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/docs/ptmlist).
 
 Within the new CCD category there are two items that map these values to the CCD ID:
-_pdbx_chem_comp_pcm.uniprot_specific_ptm_accession
-_pdbx_chem_comp_pcm.uniprot_generic_ptm_accession
+- _pdbx_chem_comp_pcm.uniprot_specific_ptm_accession
+- _pdbx_chem_comp_pcm.uniprot_generic_ptm_accession
 
 There is some overlap in the PTM definitions in the UniProt controlled vocabulary. This 
 is because some of the UniProt definitions refer to PCMs that are not
@@ -358,7 +358,7 @@ through to 'modified_residue_id_linking_atom' are obtained from _struct_conn.
 These items provide all the identifiers required to unambiguously locate the protein 
 modifications within the structure.
 
-#### Items obtained from the CCD pdbx_chem_comp_pcm category
+#### Items obtained from the CCD _pdbx_chem_comp_pcm category
 
 The following items are obtained from the _pdbx_chem_comp_pcm CCD category described 
 above:
