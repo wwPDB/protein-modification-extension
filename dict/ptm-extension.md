@@ -192,13 +192,10 @@ The category of protein modification.
 | Chromophore/chromophore-like   | Chromophore or chromophore-like protein modifications                                                                                                                                                                                                                                                          |
 | Covalent chemical modification | A diverse range of chemical compounds that form covalent bonds with amino acids. Not covered by any of the other modification categories                                                                                                                                                                       |
 | Crosslinker                    | Chemical modifications which covalently link two amino-acid residues. Excludes reaction intermediates and modifications covered by other modification categories                                                                                                                                               |
-| Disulfide bridge               | Disulfide bridge protein modifications                                                                                                                                                                                                                                                                         |
 | Flavin                         | Flavin protein modifications                                                                                                                                                                                                                                                                                   |
 | Heme/heme-like                 | Heme or heme-like protein modifications                                                                                                                                                                                                                                                                        |
-| Isopeptide bond                | Isopeptide bond protein modifications                                                                                                                                                                                                                                                                          |
 | Lipid/lipid-like               | Lipid or lipid-like protein modifications                                                                                                                                                                                                                                                                      |
 | Named protein modification     | All protein modifications that are well defined into known types, have limited diversity, and are not explicitly covered by any other category. It includes PTMs, PCMs, rare amino acids and unnatural amino acids                                                                                             |
-| Non-standard linkage           | Non-standard covalent chemical linkages directly between two polypeptide residues                                                                                                                                                                                                                              |
 | Non-standard residue           | A diverse range of non-standard polypeptide residues that are not considered to be 'Named protein modifications'. These cannot be practically split into two CCDs, which describe the standard polypeptide residue and the modification group, and are not covered by any of the other modification categories |
 | Nucleotide monophosphate       | Nucleotide monophosphate protein modifications                                                                                                                                                                                                                                                                 |
 | Terminal acetylation           | Terminal acetylation protein modification                                                                                                                                                                                                                                                                      |
@@ -278,9 +275,7 @@ A flag to indicate if the model contains any protein modifications.
 |----------------|------------------------------|
 | Y              | Protein modification present |
 
-# Category Group struct_group
-
-## Category pdbx_chem_comp_pcm
+## Category pdbx_modification_feature
 
 ```
 Data items in the PDBX_MODIFICATION_FEATURE category provides 
@@ -390,13 +385,13 @@ _pdbx_modification_feature.category
 | type                             | no  | no       | line   | None  | yes        | no      |
 | category                         | no  | yes      | line   | None  | yes        | no      |
 
-#### _pdbx_chem_comp_pcm.ordinal
+#### _pdbx_modification_feature.ordinal
 
 ```
 An ordinal index for this category.
 ```
 
-#### _pdbx_chem_comp_pcm.label_comp_id
+#### _pdbx_modification_feature.label_comp_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -406,7 +401,7 @@ This data item is a pointer to _atom_site.label_comp_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.label_asym_id
+#### _pdbx_modification_feature.label_asym_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -416,7 +411,7 @@ This data item is a pointer to _atom_site.label_asym_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.label_seq_id
+#### _pdbx_modification_feature.label_seq_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -426,7 +421,7 @@ This data item is a pointer to _atom_site.label_seq_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.label_alt_id
+#### _pdbx_modification_feature.label_alt_id
 
 ```
 A component of the identifier for the chemical component that
@@ -436,7 +431,7 @@ This data item is a pointer to _atom_site.label_alt_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_label_comp_id
+#### _pdbx_modification_feature.modified_residue_label_comp_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -446,7 +441,7 @@ This data item is a pointer to _atom_site.label_comp_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_label_asym_id
+#### _pdbx_modification_feature.modified_residue_label_asym_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -456,7 +451,7 @@ This data item is a pointer to _atom_site.label_asym_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_label_seq_id
+#### _pdbx_modification_feature.modified_residue_label_seq_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -466,7 +461,7 @@ This data item is a pointer to _atom_site.label_seq_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_label_alt_id
+#### _pdbx_modification_feature.modified_residue_label_alt_id
 
 ```
 A component of the identifier for the chemical component that
@@ -476,7 +471,7 @@ This data item is a pointer to _atom_site.label_alt_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.auth_comp_id
+#### _pdbx_modification_feature.auth_comp_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -486,7 +481,7 @@ This data item is a pointer to _atom_site.auth_comp_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.auth_asym_id
+#### _pdbx_modification_feature.auth_asym_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -496,7 +491,7 @@ This data item is a pointer to _atom_site.auth_asym_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.auth_seq_id
+#### _pdbx_modification_feature.auth_seq_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -506,7 +501,7 @@ This data item is a pointer to _atom_site.auth_seq_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.PDB_ins_code
+#### _pdbx_modification_feature.PDB_ins_code
 
 ```
 A component of the identifier for the chemical component that 
@@ -516,14 +511,14 @@ This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.symmetry
+#### _pdbx_modification_feature.symmetry
 
 ```
 Describes the symmetry operation that should be applied to the protein modification 
 group.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_auth_comp_id
+#### _pdbx_modification_feature.modified_residue_auth_comp_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -533,7 +528,7 @@ This data item is a pointer to _atom_site.auth_comp_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_auth_asym_id
+#### _pdbx_modification_feature.modified_residue_auth_asym_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -543,7 +538,7 @@ This data item is a pointer to _atom_site.auth_asym_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_auth_seq_id
+#### _pdbx_modification_feature.modified_residue_auth_seq_id
 
 ```
 A component of the identifier for the chemical component that 
@@ -553,7 +548,7 @@ This data item is a pointer to _atom_site.auth_seq_id in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_PDB_ins_code
+#### _pdbx_modification_feature.modified_residue_PDB_ins_code
 
 ```
 A component of the identifier for the chemical component that 
@@ -563,14 +558,14 @@ This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the
 ATOM_SITE category.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_symmetry
+#### _pdbx_modification_feature.modified_residue_symmetry
 
 ```
 Describes the symmetry operation that should be applied to the chemical component that 
 is being modified.
 ```
 
-#### _pdbx_chem_comp_pcm.comp_id_linking_atom
+#### _pdbx_modification_feature.comp_id_linking_atom
 
 ```
 The atom on the modification group that covalently links the 
@@ -580,7 +575,7 @@ amino acid group and the modification group are described by
 separate CCDs.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_id_linking_atom
+#### _pdbx_modification_feature.modified_residue_id_linking_atom
 
 ```
 The atom on the polypeptide residue group that covalently links 
@@ -590,13 +585,13 @@ amino acid group and the modification group are described by
 separate CCDs.
 ```
 
-#### _pdbx_chem_comp_pcm.modified_residue_id
+#### _pdbx_modification_feature.modified_residue_id
 
 ```
 Chemical component identifier for the amino acid residue that is being modified.
 ```
 
-#### _pdbx_chem_comp_pcm.ref_pcm_id
+#### _pdbx_modification_feature.ref_pcm_id
 
 ```
 A component of the identifier for the unique kind of protein 
@@ -606,7 +601,7 @@ This data item is a pointer to _pdbx_chem_comp_pcm.pcm_id in the
 CHEM_COMP_PCM category.
 ```
 
-#### _pdbx_chem_comp_pcm.ref_comp_id
+#### _pdbx_modification_feature.ref_comp_id
 
 ```
 A component of the identifier for the unique kind of protein 
@@ -616,7 +611,7 @@ This data item is a pointer to _pdbx_chem_comp_pcm.comp_id in the
 CHEM_COMP_PCM category.
 ```
 
-#### _pdbx_chem_comp_pcm.type
+#### _pdbx_modification_feature.type
 
 ```
 The type of protein modification.
@@ -636,7 +631,7 @@ The type of protein modification.
 | Triiodothyronine | .       |
 | UMPylation       | .       |
 
-#### _pdbx_chem_comp_pcm.category
+#### _pdbx_modification_feature.category
 
 ```
 The category of protein modification.
