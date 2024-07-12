@@ -2,9 +2,9 @@ data_SEP
 # 
 _chem_comp.id                                    SEP 
 _chem_comp.name                                  PHOSPHOSERINE 
-_chem_comp.type                                  "L-PEPTIDE LINKING" 
+_chem_comp.type                                  'L-PEPTIDE LINKING' 
 _chem_comp.pdbx_type                             ATOMP 
-_chem_comp.formula                               "C3 H8 N O6 P" 
+_chem_comp.formula                               'C3 H8 N O6 P' 
 _chem_comp.mon_nstd_parent_comp_id               SER 
 _chem_comp.pdbx_synonyms                         PHOSPHONOSERINE 
 _chem_comp.pdbx_formal_charge                    0 
@@ -101,12 +101,12 @@ _pdbx_chem_comp_descriptor.type
 _pdbx_chem_comp_descriptor.program 
 _pdbx_chem_comp_descriptor.program_version 
 _pdbx_chem_comp_descriptor.descriptor 
-SEP SMILES           ACDLabs              10.04 "O=P(O)(O)OCC(C(=O)O)N"                                                            
-SEP SMILES_CANONICAL CACTVS               3.341 "N[C@@H](CO[P](O)(O)=O)C(O)=O"                                                     
-SEP SMILES           CACTVS               3.341 "N[CH](CO[P](O)(O)=O)C(O)=O"                                                       
-SEP SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C([C@@H](C(=O)O)N)OP(=O)(O)O"                                                     
-SEP SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(C(=O)O)N)OP(=O)(O)O"                                                          
-SEP InChI            InChI                1.03  "InChI=1S/C3H8NO6P/c4-2(3(5)6)1-10-11(7,8)9/h2H,1,4H2,(H,5,6)(H2,7,8,9)/t2-/m0/s1" 
+SEP SMILES           ACDLabs              10.04 'O=P(O)(O)OCC(C(=O)O)N'                                                            
+SEP SMILES_CANONICAL CACTVS               3.341 'N[C@@H](CO[P](O)(O)=O)C(O)=O'                                                     
+SEP SMILES           CACTVS               3.341 'N[CH](CO[P](O)(O)=O)C(O)=O'                                                       
+SEP SMILES_CANONICAL 'OpenEye OEToolkits' 1.5.0 'C([C@@H](C(=O)O)N)OP(=O)(O)O'                                                     
+SEP SMILES           'OpenEye OEToolkits' 1.5.0 'C(C(C(=O)O)N)OP(=O)(O)O'                                                          
+SEP InChI            InChI                1.03  'InChI=1S/C3H8NO6P/c4-2(3(5)6)1-10-11(7,8)9/h2H,1,4H2,(H,5,6)(H2,7,8,9)/t2-/m0/s1' 
 SEP InChIKey         InChI                1.03  BZQFBWGGLXLEPQ-REOHCLBHSA-N                                                        
 # 
 loop_
@@ -115,18 +115,19 @@ _pdbx_chem_comp_identifier.type
 _pdbx_chem_comp_identifier.program 
 _pdbx_chem_comp_identifier.program_version 
 _pdbx_chem_comp_identifier.identifier 
-SEP "SYSTEMATIC NAME" ACDLabs              10.04 O-phosphono-L-serine                         
-SEP "SYSTEMATIC NAME" "OpenEye OEToolkits" 1.5.0 "(2S)-2-amino-3-phosphonooxy-propanoic acid" 
+SEP 'SYSTEMATIC NAME' ACDLabs              10.04 O-phosphono-L-serine                         
+SEP 'SYSTEMATIC NAME' 'OpenEye OEToolkits' 1.5.0 '(2S)-2-amino-3-phosphonooxy-propanoic acid' 
 # 
 loop_
 _pdbx_chem_comp_audit.comp_id 
 _pdbx_chem_comp_audit.action_type 
 _pdbx_chem_comp_audit.date 
 _pdbx_chem_comp_audit.processing_site 
-SEP "Create component"  1999-07-08 RCSB 
-SEP "Modify descriptor" 2011-06-04 RCSB 
-SEP "Modify synonyms"   2021-03-01 PDBE 
-SEP "Modify backbone"   2023-11-03 PDBE 
+SEP 'Create component'  1999-07-08 RCSB
+SEP 'Modify descriptor' 2011-06-04 RCSB
+SEP 'Modify synonyms'   2021-03-01 PDBE
+SEP 'Modify backbone'   2023-11-03 PDBE
+SEP 'Modify PCM'        2024-07-12 PDBE
 # 
 _pdbx_chem_comp_synonyms.ordinal      1 
 _pdbx_chem_comp_synonyms.comp_id      SEP 
@@ -134,15 +135,18 @@ _pdbx_chem_comp_synonyms.name         PHOSPHONOSERINE
 _pdbx_chem_comp_synonyms.provenance   ? 
 _pdbx_chem_comp_synonyms.type         ? 
 # 
-_pdbx_chem_comp_pcm.pcm_id                             1
-_pdbx_chem_comp_pcm.comp_id                            SEP
-_pdbx_chem_comp_pcm.modified_residue_id                SER
-_pdbx_chem_comp_pcm.type                               Phosphorylation
-_pdbx_chem_comp_pcm.category                           "Named protein modification"
-_pdbx_chem_comp_pcm.position                           "Amino-acid side chain"
-_pdbx_chem_comp_pcm.polypeptide_position               "Any position"
-_pdbx_chem_comp_pcm.comp_id_linking_atom               .
-_pdbx_chem_comp_pcm.modified_residue_id_linking_atom   .
-_pdbx_chem_comp_pcm.uniprot_specific_ptm_accession     PTM-0253
-_pdbx_chem_comp_pcm.uniprot_generic_ptm_accession      ?
-
+loop_
+_pdbx_chem_comp_pcm.pcm_id 
+_pdbx_chem_comp_pcm.comp_id 
+_pdbx_chem_comp_pcm.modified_residue_id 
+_pdbx_chem_comp_pcm.type 
+_pdbx_chem_comp_pcm.category 
+_pdbx_chem_comp_pcm.position 
+_pdbx_chem_comp_pcm.polypeptide_position 
+_pdbx_chem_comp_pcm.comp_id_linking_atom 
+_pdbx_chem_comp_pcm.modified_residue_id_linking_atom 
+_pdbx_chem_comp_pcm.uniprot_specific_ptm_accession 
+_pdbx_chem_comp_pcm.uniprot_generic_ptm_accession 
+1 SEP SER Phosphorylation 'Named protein modification'     'Amino-acid side chain' 'Any position' ? ?     PTM-0253 ?
+2 SEP LLP None            'Covalent chemical modification' 'Amino-acid side chain' 'Any position' N "C4'" ?        ?
+# 
