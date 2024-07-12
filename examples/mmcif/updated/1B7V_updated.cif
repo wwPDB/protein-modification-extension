@@ -1025,8 +1025,8 @@ _pdbx_modification_feature.ref_pcm_id
 _pdbx_modification_feature.ref_comp_id 
 _pdbx_modification_feature.type 
 _pdbx_modification_feature.category 
-1 HEC B . ? CYS A 11 ? HEC A 93 ? 1_555 CYS A 32 ? 1_555 CAB SG CYS 1 HEC None Heme/heme-like 
-2 HEC B . ? CYS A 14 ? HEC A 93 ? 1_555 CYS A 35 ? 1_555 CAC SG CYS 2 HEC None Heme/heme-like 
+1 HEC B . ? CYS A 11 ? HEC A 93 ? 1_555 CYS A 32 ? 1_555 CAB SG CYS 2 HEC None Heme/heme-like 
+2 HEC B . ? CYS A 14 ? HEC A 93 ? 1_555 CYS A 35 ? 1_555 CAC SG CYS 3 HEC None Heme/heme-like 
 # 
 loop_
 _atom_site.group_PDB 
