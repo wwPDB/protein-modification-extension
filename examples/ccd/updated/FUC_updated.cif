@@ -179,6 +179,6 @@ _pdbx_chem_comp_pcm.comp_id_linking_atom
 _pdbx_chem_comp_pcm.modified_residue_id_linking_atom
 _pdbx_chem_comp_pcm.uniprot_specific_ptm_accession
 _pdbx_chem_comp_pcm.uniprot_generic_ptm_accession
-1 FUC SER None Carbohydrate "Amino-acid side chain" "Any position" C1 OG  ? ?
-2 FUC THR None Carbohydrate "Amino-acid side chain" "Any position" C1 OG1 ? ?
+1 FUC SER O-Glycosylation Carbohydrate "Amino-acid side chain" "Any position" C1 OG  ? ?
+2 FUC THR O-Glycosylation Carbohydrate "Amino-acid side chain" "Any position" C1 OG1 ? ?
 
